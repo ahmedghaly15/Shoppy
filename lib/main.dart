@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart' show ScreenUtil;
 
-void main() {
-  runApp(const MainApp());
-}
+import 'src/core/widgets/flutter_error_details_view.dart';
+import 'src/shoppe_app.dart';
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
-    );
-  }
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await ScreenUtil.ensureScreenSize();
+  ErrorWidget.builder = (FlutterErrorDetails details) =>
+      FlutterErrorDetailsView(details: details);
+  runApp(const ShoppeApp());
 }
