@@ -36,6 +36,13 @@ dependencies:
   image_picker: ^1.1.2
   # Effectively reduce the size of the transmission
   flutter_image_compress: ^2.4.0
+  # Prints beautiful logs
+  logger: ^2.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
   # A build system for Dart code generation and modular compilation.
   build_runner: ^2.4.14
   # code generator for riverpod
@@ -57,10 +64,24 @@ dependencies:
   # Updates the app icon
   icons_launcher: ^3.0.1
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^5.0.0
-
 flutter:
   uses-material-design: true
+
+
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway/Raleway-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Raleway/Raleway-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Raleway/Raleway-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Raleway/Raleway-Bold.ttf
+          weight: 700
+
+flutter_assets:
+  assets_path: assets/
+  output_path: lib/core/utils/
+  filename: assets.dart
+  field_prefix: null

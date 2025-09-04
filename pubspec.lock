@@ -114,7 +114,7 @@ packages:
     source: hosted
     version: "2.5.4"
   build_runner:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: build_runner
       sha256: "382a4d649addbfb7ba71a3631df0ec6a45d5ab9b098638144faf27f02778eb53"
@@ -258,7 +258,7 @@ packages:
     source: hosted
     version: "1.0.2"
   custom_lint:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: custom_lint
       sha256: "021897cce2b6c783b2521543e362e7fe1a2eaab17bf80514d8de37f99942ed9e"
@@ -476,7 +476,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_native_splash:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: flutter_native_splash
       sha256: "8321a6d11a8d13977fa780c89de8d257cce3d841eecfb7a4cadffcc4f12d82dc"
@@ -582,7 +582,7 @@ packages:
     source: sdk
     version: "0.0.0"
   freezed:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: freezed
       sha256: "59a584c24b3acdc5250bb856d0d3e9c0b798ed14a4af1ddb7dc1c7b41df91c9c"
@@ -670,7 +670,7 @@ packages:
     source: hosted
     version: "4.1.2"
   icons_launcher:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: icons_launcher
       sha256: e6d806458fac6d3b1126ad757b4208a314ba775b3c8119cd88877091379edc7a
@@ -782,7 +782,7 @@ packages:
     source: hosted
     version: "4.9.0"
   json_serializable:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: json_serializable
       sha256: c50ef5fc083d5b5e12eef489503ba3bf5ccc899e487d691584699b4bdefeea8c
@@ -821,6 +821,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.1.1"
+  logger:
+    dependency: "direct main"
+    description:
+      name: logger
+      sha256: "55d6c23a6c15db14920e037fe7e0dc32e7cdaf3b64b4b25df2d541b5b6b81c0c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.1"
   logging:
     dependency: transitive
     description:
@@ -1014,7 +1022,7 @@ packages:
     source: hosted
     version: "1.5.0"
   rename_app:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: rename_app
       sha256: "387a88335f853674b39bed7943955388bbaf6aae4ffdc812e2ef275ce119abc7"
@@ -1030,7 +1038,7 @@ packages:
     source: hosted
     version: "4.7.2"
   retrofit_generator:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: retrofit_generator
       sha256: "9abcf21acb95bf7040546eafff87f60cf0aee20b05101d71f99876fc4df1f522"
@@ -1062,7 +1070,7 @@ packages:
     source: hosted
     version: "2.6.1"
   riverpod_generator:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: riverpod_generator
       sha256: "120d3310f687f43e7011bb213b90a436f1bbc300f0e4b251a72c39bccb017a4f"
@@ -1070,7 +1078,7 @@ packages:
     source: hosted
     version: "2.6.4"
   riverpod_lint:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: riverpod_lint
       sha256: b05408412b0f75dec954e032c855bc28349eeed2d2187f94519e1ddfdf8b3693
