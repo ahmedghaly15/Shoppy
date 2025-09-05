@@ -17,9 +17,9 @@ class ShoppeApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (_, __) => ShadApp.custom(
+      builder: (_, child) => ShadApp.custom(
         appBuilder: (context) => Consumer(
-          builder: (_, WidgetRef ref, __) => MaterialApp.router(
+          builder: (_, WidgetRef ref, child) => MaterialApp.router(
             debugShowCheckedModeBanner: false,
             title: AppStrings.appName,
             routerConfig: ref
