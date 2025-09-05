@@ -1,7 +1,11 @@
+import 'package:auto_route/auto_route.dart' show AutoRouteObserver;
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart' show ScreenUtilInit;
 import 'package:shadcn_ui/shadcn_ui.dart' show ShadApp;
 
+import '../app_routes_observer.dart';
+import 'core/router/app_router.dart';
 import 'core/utils/app_strings.dart';
 
 class ShoppeApp extends StatelessWidget {
@@ -14,16 +18,18 @@ class ShoppeApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, __) => ShadApp.custom(
-        appBuilder: (context) => MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: AppStrings.appName,
-          home: Scaffold(
-            body: Center(
-              child: Text(
-                'Welcome',
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-            ),
+        appBuilder: (context) => Consumer(
+          builder: (_, WidgetRef ref, __) => MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            title: AppStrings.appName,
+            routerConfig: ref
+                .read(autoRouteProvider)
+                .config(
+                  navigatorObservers: () => [
+                    AppRoutesObserver(),
+                    AutoRouteObserver(),
+                  ],
+                ),
           ),
         ),
       ),
