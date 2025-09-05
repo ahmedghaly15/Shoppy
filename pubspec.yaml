@@ -38,6 +38,8 @@ dependencies:
   flutter_image_compress: ^2.4.0
   # Prints beautiful logs
   logger: ^2.5.0
+  # Routing
+  auto_route: ^10.1.2
 
 dev_dependencies:
   flutter_test:
