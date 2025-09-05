@@ -17,66 +17,82 @@ class OnboardingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        slivers: [
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: Column(
-              children: [
-                const Spacer(),
-                Container(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 21.h,
-                    horizontal: 26.w,
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 50.h),
+        child: CustomScrollView(
+          slivers: [
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                children: [
+                  const Spacer(),
+                  _shadowCircleAppIcon(),
+                  MySizedBox.height24,
+                  Text(AppStrings.appName, style: context.shadTextTheme.h1),
+                  MySizedBox.height18,
+                  _onboardingDescriptionText(context),
+                  const Spacer(),
+                  PrimaryButton(
+                    expands: true,
+                    text: AppStrings.letsGetStarted,
+                    onPressed: () {},
                   ),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        offset: Offset(0, 3.h),
-                        blurRadius: 8.r,
-                        spreadRadius: 0,
-                        color: Colors.black.withAlpha(40),
-                      ),
-                    ],
-                  ),
-                  child: Image.asset(Assets.appIcon),
-                ),
-                MySizedBox.height24,
-                Text(AppStrings.appName, style: context.shadTextTheme.h3),
-                MySizedBox.height18,
-                FittedBox(
-                  child: Text(
-                    AppStrings.onboardingDescription,
-                    style: context.shadTextTheme.h4,
-                  ),
-                ),
-                const Spacer(),
-                PrimaryButton(
-                  text: AppStrings.letsGetStarted,
-                  onPressed: () {},
-                ),
-                MySizedBox.height18,
-                TextButton.icon(
-                  onPressed: () {},
-                  label: CircleAvatar(
-                    radius: 15.r,
-                    backgroundColor: AppColors.primaryColor,
-                    child: const Icon(
-                      LucideIcons.arrowRight,
-                      color: Colors.white,
-                    ),
-                  ),
-                  icon: Text(
-                    AppStrings.alreadyHaveAnAccount,
-                    style: context.shadTextTheme.small,
-                  ),
-                ),
-              ],
+                  MySizedBox.height18,
+                  _letsGetStartedTextButton(context),
+                ],
+              ),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  TextButton _letsGetStartedTextButton(BuildContext context) {
+    return TextButton.icon(
+      onPressed: () {},
+      label: CircleAvatar(
+        radius: 15.r,
+        backgroundColor: AppColors.primaryColor,
+        child: const Icon(LucideIcons.arrowRight, color: Colors.white),
+      ),
+      icon: Text(
+        AppStrings.alreadyHaveAnAccount,
+        style: context.shadTextTheme.small,
+      ),
+    );
+  }
+
+  Padding _onboardingDescriptionText(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 43.w),
+      child: FittedBox(
+        child: Text(
+          AppStrings.onboardingDescription,
+          style: context.shadTextTheme.large.copyWith(
+            color: AppColors.color202020,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Container _shadowCircleAppIcon() {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 21.h, horizontal: 26.w),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        shape: BoxShape.circle,
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(0, 3.h),
+            blurRadius: 8.r,
+            spreadRadius: 0,
+            color: Colors.black.withAlpha(40),
           ),
         ],
       ),
+      child: Image.asset(Assets.appIcon),
     );
   }
 }
