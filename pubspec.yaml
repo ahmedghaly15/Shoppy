@@ -11,10 +11,10 @@ dependencies:
     sdk: flutter
   
   # state management
-  flutter_riverpod: ^2.6.1
-  riverpod_annotation: ^2.6.1
+  flutter_riverpod: ^3.0.0-dev.17
+  riverpod_annotation: ^3.0.0-dev.17
   # A code generator for immutable classes
-  freezed_annotation: ^2.4.4
+  freezed_annotation: ^3.1.0
   # A code generator for JSON serialization
   json_annotation: ^4.9.0
   # Flutter plugin for reading and writing simple key-value pairs for cache
@@ -24,7 +24,7 @@ dependencies:
   # A flutter plugin for adapting screen and font size.Guaranteed to look good on different models
   flutter_screenutil: ^5.9.3
   # Provides Awesome UI components for Flutter
-  shadcn_ui: ^0.27.0
+  shadcn_ui: ^0.30.5
   # Beautiful animations
   animate_do: ^4.2.0
   # To load and cache network images
@@ -44,27 +44,29 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
   # A build system for Dart code generation and modular compilation.
   build_runner: ^2.4.14
   # code generator for riverpod
-  riverpod_generator: ^2.6.0
+  riverpod_generator: ^3.0.0-dev.17
   # Custom Lint rules are a powerful way to improve the maintainability of a project
-  custom_lint: ^0.7.0
+  custom_lint: ^0.8.0
   # A developer tool for users of Riverpod, designed to help stop common issues and simplify repetitive tasks.
-  riverpod_lint: ^2.6.1
+  riverpod_lint: ^3.0.0-dev.17
   # A code generator for immutable classes
-  freezed: ^2.5.7
+  freezed: ^3.2.0
   # Automatically generate code for converting to and from JSON by annotating Dart classes.
   json_serializable: ^6.9.0
   # Code generator for Retrofit
-  retrofit_generator: ^9.2.0
+  retrofit_generator: ^10.0.0
   # Generates a native splash screen for Flutter
   flutter_native_splash: ^2.4.6
   # Changes the name of the app
   rename_app: ^1.6.5
   # Updates the app icon
   icons_launcher: ^3.0.1
+  # routing builder
+  auto_route_generator: ^10.0.0
 
 flutter:
   uses-material-design: true
