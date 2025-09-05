@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 import 'package:shoppy/src/core/helpers/extensions.dart';
 
@@ -26,11 +27,16 @@ class PrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ShadButton(
-      size: size,
-      decoration: decoration,
+      size: size ?? ShadButtonSize.lg,
+      decoration:
+          decoration ??
+          ShadDecoration(
+            border: ShadBorder.all(radius: BorderRadius.circular(16.r)),
+          ),
       onPressed: onPressed,
       leading: leading,
       expands: expands,
+      backgroundColor: AppColors.primaryColor,
       child:
           child ??
           Text(
